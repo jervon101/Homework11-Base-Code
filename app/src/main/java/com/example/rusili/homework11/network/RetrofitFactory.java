@@ -57,7 +57,7 @@ public class RetrofitFactory {
 			@Override
 			public void onResponse (@NonNull Call <Pokedex> call, @NonNull Response <Pokedex> response) {
 				if (response.isSuccessful()) {
-					Log.d("onResponse: ", "Successful");
+					Log.e("onResponse: ", "Successful");
 
 					if (pokedexNetworkListener != null) {
 						pokedexNetworkListener.pokedexCallback(response.body());
@@ -79,7 +79,7 @@ public class RetrofitFactory {
 			@Override
 			public void onResponse (@NonNull Call <Pokemon> call, @NonNull Response <Pokemon> response) {
 				if (response.isSuccessful()) {
-					Log.d("onResponse: ", "Successful");
+					Log.e("onResponse: ", "Successful");
 
 					if (pokemonNetworkListener != null) {
 						pokemonNetworkListener.pokemonCallback(response.body());

@@ -14,5 +14,22 @@ public class Pokedex {
     private VersionGroups[] version_groups;
     private PokemonEntries[] pokemon_entries;
 
+    public int getId() {
+        return id;
+    }
+
+    public Region getRegion() {
+        return region;
+    }
+
+    public VersionGroups[] getVersion_groups() {
+        return version_groups;
+    }
+
+    public PokemonEntries[] getPokemon_entries() {
+        return pokemon_entries;
+    }
+
+
     //TODO: Create getters
 }
