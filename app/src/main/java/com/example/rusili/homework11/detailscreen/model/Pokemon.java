@@ -9,6 +9,7 @@ public class Pokemon {
 	private Sprites sprites;
 	private Types[] types;
 
+
 	//TODO: Create getters
 
 
@@ -23,4 +24,6 @@ public class Pokemon {
 	public Types[] getTypes() {
 		return types;
 	}
+
+
 }

@@ -2,6 +2,7 @@ package com.example.rusili.homework11.util;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -22,36 +23,38 @@ public class PokeMonHolder extends RecyclerView.ViewHolder {
     TextView textView;
     Context context;
 
+
+
+
     public PokeMonHolder(View itemView) {
         super(itemView);
         imageView = (ImageView) itemView.findViewById(R.id.image);
-        textView= (TextView) itemView.findViewById(R.id.text);
+        textView = (TextView) itemView.findViewById(R.id.text);
         context = itemView.getContext();
 
     }
 
     public void onBind(final PokemonEntries entries) {
 
-
-    textView.setText(entries.getPokemon_species().getName());
-    textView.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent intent = new Intent(itemView.getContext(), PokemonDetailActivity.class);
-            intent.putExtra("name",entries.getPokemon_species().getName());
-            context.startActivity(intent);
-        }
-    });
+//        String url = log.getString(entries.getPokemon_species().getName(), null);
 
 
+        textView.setText(entries.getPokemon_species().getName());
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(itemView.getContext(), PokemonDetailActivity.class);
+                intent.putExtra("name", entries.getPokemon_species().getName());
+                context.startActivity(intent);
+            }
+        });
 
 
 //        Picasso.with(itemView.getContext()).load(entries.getPokemon_species().getUrl()).into(imageView);
 
 
-
-        Log.e("The VAlue is ",entries.getPokemon_species().getName()+"");
-        Log.e(".getUrl() :",entries.getPokemon_species().getUrl()+"");
+        Log.e("The VAlue is ", entries.getPokemon_species().getUrl() + "");
+//        Log.e(".getUrl() :", url + "");
 
     }
 }
