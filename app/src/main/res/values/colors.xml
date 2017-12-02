@@ -3,4 +3,22 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="grass">#0a6615</color>
+    <color name="fire">#991f1f</color>
+    <color name="water">#1f52b6</color>
+    <color name="poison">#56128b</color>
+    <color name="bug">#2db752</color>
+    <color name="ground">#5c5938</color>
+    <color name="electric">#c7c413</color>
+    <color name="normal">#686667</color>
+    <color name="fairy">#f188ba</color>
+    <color name="fighting">#be661d16</color>
+    <color name="psychic">#fd2770</color>
+    <color name="steel">#696667</color>
+    <color name="ice">#2cdebd</color>
+    <color name="ghost">#745491</color>
+    <color name="rock">#3e2723</color>
+    <color name="dragon">#caa0ae</color>
+    <color name="flying">#c17640</color>
+
 </resources>
