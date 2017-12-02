@@ -86,9 +86,6 @@ public class PokedexFragment extends Fragment {
                     entriesList.add(pokedex.getPokemon_entries()[i]);
 
 
-
-
-
                     intent.putExtra("test", true);
                     intent.putExtra("1", pokedex.getPokemon_entries()[i].getPokemon_species().getName());
 

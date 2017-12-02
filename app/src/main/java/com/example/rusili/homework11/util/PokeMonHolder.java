@@ -49,6 +49,7 @@ public class PokeMonHolder extends RecyclerView.ViewHolder {
 
 
         textView.setText(entries.getPokemon_species().getName() +"   "+ entries.getEntry_number());
+
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,14 +59,26 @@ public class PokeMonHolder extends RecyclerView.ViewHolder {
             }
         });
 
-       StringBuilder stringBuilder = new StringBuilder("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/");
+//       StringBuilder stringBuilder = new StringBuilder("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/");
+//
+//       stringBuilder.append(entries.getEntry_number()).append(".png");
 
-       stringBuilder.append(entries.getEntry_number()).append(".png");
+
+        StringBuilder stringgif = new StringBuilder("http://www.pokestadium.com/sprites/xy/");
+
+        stringgif.append(entries.getPokemon_species().getName()).append(".gif");
 
 
         Glide.with(itemView.getContext())
-                        .load(stringBuilder.toString())
-                        .into(imageView);
+                .load(stringgif.toString())
+                .into(imageView);
+
+
+
+
+//        Glide.with(itemView.getContext())
+//                        .load(stringBuilder.toString())
+//                        .into(imageView);
 //
 
 //        Picasso.with(itemView.getContext()).load(entries.getPokemon_species().getUrl()).into(imageView);
