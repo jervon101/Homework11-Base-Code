@@ -79,9 +79,21 @@ public class PokemonDetailActivity extends AppCompatActivity {
                 name.setText(id.toUpperCase());
 
 
-                Picasso.with(getApplicationContext())
-                        .load(pokemon.getSprites().getFront_default()).centerCrop().fit()
-                        .into((ImageView) findViewById(R.id.image1));
+
+                StringBuilder stringgif = new StringBuilder("http://www.pokestadium.com/sprites/xy/");
+
+                stringgif.append(id).append(".gif");
+
+
+                Glide.with(getApplicationContext())
+                        .load(stringgif.toString())
+                        .into(view1);
+
+
+
+//                Picasso.with(getApplicationContext())
+//                        .load(pokemon.getSprites().getFront_default()).centerCrop().fit()
+//                        .into((ImageView) findViewById(R.id.image1));
 
 //                Glide.with(getApplicationContext())
 //                        .load(pokemon.getSprites().getFront_default())
