@@ -54,7 +54,7 @@ public class PokedexFragment extends Fragment {
 
 //        recyclerView.setLayoutManager(linearLayoutManager);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 2);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 4);
         recyclerView.setLayoutManager(gridLayoutManager);
 
         return view;
@@ -77,17 +77,13 @@ public class PokedexFragment extends Fragment {
                 Log.e("Lenght ", entries.length + "");
 
 
-//                List<PokemonEntries> entriesList = new ArrayList<>(Arrays.asList(entries));
 
 
                 for (int i = 0; i < entries.length; i++) {
 
-//                    String url = log.getString(pokedex.getPokemon_entries()[i].getPokemon_species().getName(), null);
 
-//                    pokedex.getPokemon_entries()[i].getPokemon_species().setUrl(url);
 
                     entriesList.add(pokedex.getPokemon_entries()[i]);
-//name
 
 
 
@@ -97,7 +93,6 @@ public class PokedexFragment extends Fragment {
                     intent.putExtra("1", pokedex.getPokemon_entries()[i].getPokemon_species().getName());
 
 
-//                    Log.e("Lenght of list ", pokedex.getPokemon_entries()[i].getPokemon_species().getName()+ "");
                 }
 
 
@@ -105,7 +100,6 @@ public class PokedexFragment extends Fragment {
 
                 recyclerView.setAdapter(adapter);
 
-//                Log.e("Lenght of list ", entriesList.size() + "");
 
 
             }
